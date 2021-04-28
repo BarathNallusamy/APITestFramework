@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using API_App;
 using NUnit.Framework;
 using System.Threading.Tasks;
+using API_App.PostcodesIOService;
 
 namespace APITests.Tests
 {
@@ -33,13 +34,13 @@ namespace APITests.Tests
         [Test]
         public void ObjectStatusIs200()
         {
-            Assert.That(_singlePostCodeService.ResponseObj.status, Is.EqualTo(200));
+            Assert.That(_singlePostCodeService.SinglePostcodeDTO.SinglePostCodeResponse.status, Is.EqualTo(200));
         }
 
         [Test]
         public void ObjectStatusIsCityOfLondon()
         {
-            Assert.That(_singlePostCodeService.ResponseObj.result.admin_district, Is.EqualTo("City of London"));
+            Assert.That(_singlePostCodeService.SinglePostcodeDTO.SinglePostCodeResponse.result.admin_district, Is.EqualTo("City of London"));
         }
 
         //Make new service object and classes derived from Json

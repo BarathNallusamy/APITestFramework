@@ -1,6 +1,4 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
-using API_App;
+﻿using API_App.PostcodesIOService;
 using NUnit.Framework;
 using System.Threading.Tasks;
 
@@ -33,13 +31,13 @@ namespace APITests
         [Test]
         public void ObjectStatusIs200()
         {
-            Assert.That(_lookOutwardCodeService.ResponseObj.status, Is.EqualTo(200));
+            Assert.That(_lookOutwardCodeService.LookOutwardCodeDTO.LookOutwardCode.status, Is.EqualTo(200));
         }
 
         [Test]
         public void CountAdminWardInthisOutCode()
         {
-            var result = _lookOutwardCodeService.ResponseObj.result.admin_ward.Length;
+            var result = _lookOutwardCodeService.LookOutwardCodeDTO.LookOutwardCode.result.admin_ward.Length;
             Assert.That(result, Is.EqualTo(6));
         }
     }
