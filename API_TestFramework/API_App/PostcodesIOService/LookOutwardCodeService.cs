@@ -36,7 +36,7 @@ namespace API_App.PostcodesIOService
         {
             outcodeSelected = outcode;
             //make the request
-            outcodeResponse = await CallManager.MakeSingleOuttcodeRequest(outcode);
+            outcodeResponse = await CallManager.MakeSingleOutcodeRequest(outcode);
 
             //parse json into a JObject
             ResponseContent = JObject.Parse(outcodeResponse);

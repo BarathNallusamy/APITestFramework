@@ -36,7 +36,7 @@ namespace API_App.PostcodesIOService
             return response.Content;
         }
 
-        public async Task<string> MakeSingleOuttcodeRequest(string postcode)
+        public async Task<string> MakeSingleOutcodeRequest(string postcode)
         {
             //setup the request
             var request = new RestRequest();

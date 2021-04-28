@@ -43,6 +43,10 @@ namespace APITests.Tests
             Assert.That(_singlePostCodeService.SinglePostcodeDTO.SinglePostCodeResponse.result.admin_district, Is.EqualTo("City of London"));
         }
 
-        //Make new service object and classes derived from Json
+        [Test]
+        public void NumberOfCodes_IsCorrect()
+        {
+            Assert.That(_singlePostCodeService.CodesCount(), Is.EqualTo(12));
+        }
     }
 }
