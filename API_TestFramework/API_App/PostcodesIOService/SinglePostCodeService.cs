@@ -47,7 +47,6 @@ namespace API_App.PostcodesIOService
         public int CodesCount()
         {
             return ResponseContent["result"]["codes"].Count();
-            
         }
     }
 }
