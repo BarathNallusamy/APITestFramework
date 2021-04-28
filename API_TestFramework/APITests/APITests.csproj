@@ -54,6 +54,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\WhenTheSinglePostCodeServiceIsCalledWithValidPostcode.cs" />
+    <Compile Include="WhenOutCodeIsCalledWithValidCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
